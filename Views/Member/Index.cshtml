@@ -1,0 +1,136 @@
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: left;
+  background-color: #FFFFFF;
+}
+</style>
+@{
+    Layout="_LayoutMember";
+}
+<br><br><br><br>
+<section class="blog-post-area section-margin mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 sidebar-widgets">
+              <div class="widget-wrap">
+                <div class="single-sidebar-widget newsletter-widget">
+                  <h4 class="single-sidebar-widget__title">What Do You Want ?</h4>
+                  <div class="form-group mt-30">
+                    <div class="col-autos">
+                      <select class="form-control" id="select">
+                          <option value="By DateTime">By DateTime</option>
+                          <option value="By Title">By Title</option>
+                          <option value="By Status">By Status</option>
+                      </select>
+                      <br>
+                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter keyword" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'Enter email'">
+                    </div>
+                  </div>
+                  <button id="searchsort" class="bbtns d-block mt-20 w-100" onclick="javascript:SearchSortButton(this)">Search</button>
+                </div>
+
+
+                <div class="single-sidebar-widget post-category-widget">
+                  <h4 class="single-sidebar-widget__title">Catgory</h4>
+                  <ul class="cat-list mt-20">
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Technology</p>
+                        <p>(03)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Software</p>
+                        <p>(09)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Lifestyle</p>
+                        <p>(12)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Shopping</p>
+                        <p>(02)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Food</p>
+                        <p>(10)</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+                @{
+                    var threads = ViewBag.threads;
+                    foreach(var i in threads)
+                    {
+                        <div class="card" onclick="location.href='/Home/Detail?id=@i.Id'">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <small><b>@i.UserName</b> / <small class="text-muted">@i.CreatedAt.ToString("dd-MM-yyyy H:mm")</small></small>
+                                        <h4>@i.Title</h4>
+                                        <small>@i.Category</small>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="text-right">
+                                            <img src="@i.Image" style="width: 100px;height:100px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    }
+                }
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    function SearchSortButton(btn)
+    {
+        var sort = document.getElementById("select").value;
+        var search = document.getElementById("inlineFormInputGroup").value;
+        location.href='/Member/Index?search='+search+'&sort='+sort;
+    }
+</script>

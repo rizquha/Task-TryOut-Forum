@@ -1,0 +1,48 @@
+<style>
+    #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<br><br><br><br>
+<table id="customers">
+  <tr>
+    <th>No</th>
+    <th>Member</th>
+    <th>Action</th>
+  </tr>
+  @{
+      var counter=0;
+      var member = ViewBag.member;
+      foreach(var i in member)
+      {
+          counter+=1;
+        <tr>
+            <td>@counter</td>
+            <td>@i.Nama</td>
+            <td>
+                <button onclick="location.href='/Moderator/BanMember?id=@i.Id'" class="btn btn-info">Ban This Member</button>
+            </td>
+        </tr>
+      }
+  }
+  
+</table>

@@ -1,0 +1,91 @@
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.exe
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.deps.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.runtimeconfig.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.runtimeconfig.dev.json
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.pdb
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.Views.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Task Try Out Forum.Views.pdb
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.csprojAssemblyReference.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\staticwebassets\Task Try Out Forum.StaticWebAssets.Manifest.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\staticwebassets\Task Try Out Forum.StaticWebAssets.xml
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.MvcApplicationPartsAssemblyInfo.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.RazorAssemblyInfo.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.RazorAssemblyInfo.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.AssemblyInfoInputs.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.AssemblyInfo.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.TagHelpers.input.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.TagHelpers.output.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.RazorCoreGenerate.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.RazorTargetAssemblyInfo.cache
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.RazorTargetAssemblyInfo.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.Views.pdb
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.csproj.CopyComplete
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Task Try Out Forum.pdb
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Detail.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Member\Index.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Member\Detail.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutMember.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Member\NewThread.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Moderator\Detail.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Moderator\Index.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutModerator.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\MailKit.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\MimeKit.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Verification.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\bin\Debug\netcoreapp3.1\MarkdownSharp.dll
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Moderator\ListUser.cshtml.g.cs
+D:\Users\bsi50129\.vscode\Task Try Out Forum\obj\Debug\netcoreapp3.1\Razor\Views\Moderator\NewThread.cshtml.g.cs

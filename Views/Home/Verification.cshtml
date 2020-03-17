@@ -1,0 +1,7 @@
+<br><br><br><br><br>
+@{
+    var user = ViewBag.user;
+        <label>Nama : @user.Nama</label>
+        <label>Email : @user.Email</label>
+        <button onclick="location.href='/Home/SuccessVerif?id=@user.Id'">Verification</button>
+}
