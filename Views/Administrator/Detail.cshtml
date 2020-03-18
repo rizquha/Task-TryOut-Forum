@@ -31,44 +31,17 @@ body {
   background-color: #FFFFFF;
 }
 </style>
-@{
-    Layout="_LayoutModerator";
-}
 <br><br><br><br>
 <section class="blog-post-area section-margin mt-4">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 sidebar-widgets">
-              <div class="widget-wrap">
-                <div class="single-sidebar-widget post-category-widget">
-                  <h4 class="single-sidebar-widget__title">Thread Rekomendasi</h4>
-                  <ul class="cat-list mt-20">
-                    <li>
-                        <div class="container text-left" style="margin-left:0px;">
-                            <div class="row">
-                                <div class="col-8 text-left">
-                                    <p><b>etika menyalip bus di jalan tol</b></p>
-                                    <p></p>
-                                    <small class="text-muted">Sains & Technology</small>
-                                </div>
-                                <div class="col-2">
-                                    <img src="https://s.kaskus.id/images/2019/06/01/7580643_201906011024150933.jpg" style="width:70px;height:70px;">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-8">
                 @{
                     var detail = ViewBag.detail;
+                    var full = ViewBag.full;
                     foreach(var i in detail)
                     {
                         <div class="card">
-                            <div class="containe">
+                            <div class="container">
                                 <div class="row">
                                     <div class="col-1">
                                         <img src="https://pngimage.net/wp-content/uploads/2018/06/inc-logo-png-4.png" style="width: 50px;height:50px;border-radius:50%;">
@@ -86,11 +59,28 @@ body {
                                 <img src="@i.Image" style="width:600px;height:400px;">
                             </div><br>
                             <p>@i.Body</p>
+                            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" id="@i.Id" data-threadid="@i.Id" onclick="javascript:Collapse(this)">Simple collapsible</button>
+
                         </div>
                         <br>
                     }
+                    <div id="demo" class="collapse">
+                        @foreach(var i in full)
+                        {
+                        <div class="card">
+                          @if(@i.Image!=null)
+                          {
+                            <div class="text-center">
+                                <img src="@i.Image" style="width:600px;height:400px;">
+                            </div><br>
+                            <p>@i.Body</p>
+                          }else{
+                            <p>@i.Body</p>
+                          }
+                        </div>
+                        }
+                    </div>
                 }
-            </div>
         </div>
     </div>
-</section>
+

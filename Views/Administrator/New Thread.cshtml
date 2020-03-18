@@ -1,0 +1,15 @@
+@{
+    Layout="_LayoutAdministrator";
+}
+<br><br><br><br><br>
+<form method="POST" id="form1" enctype="multipart/form-data" asp-action="Add" asp-controller="Administrator">
+    <label>Category</label>
+    <input class="form-control" placeholder="Category" name="category">
+    <label>Title</label>
+    <input class="form-control" placeholder="Title" name="title">
+    <label>Body</label>
+    <input class="form-control" placeholder="Body" name="body">
+    <label>Image</label>
+    <input type="file" name="image">
+    <button type="submit">Add Thread</button>
+</form>

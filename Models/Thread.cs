@@ -11,10 +11,7 @@ namespace Task_Try_Out_Forum.Models
         public string Image {get;set;}
         public DateTime CreatedAt {get;set;}
         public string Status {get;set;}
-        public int Views {get;set;}
-        public int Comment {get;set;}
         public int UserId {get;set;}
         public string UserName {get;set;}
-
     }
 }

@@ -20556,6 +20556,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Administrator\\New Thread.cshtml",
+      "TargetPath": "Views\\Administrator\\New Thread.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Home\\Login.cshtml",
       "TargetPath": "Views\\Home\\Login.cshtml",
       "FileKind": "mvc"
@@ -20563,6 +20568,11 @@
     {
       "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Shared\\_LayoutModerator.cshtml",
       "TargetPath": "Views\\Shared\\_LayoutModerator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Member\\NextThread.cshtml",
+      "TargetPath": "Views\\Member\\NextThread.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20633,6 +20643,11 @@
     {
       "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Users\\bsi50129\\.vscode\\Task Try Out Forum\\Views\\Administrator\\ListUser.cshtml",
+      "TargetPath": "Views\\Administrator\\ListUser.cshtml",
       "FileKind": "mvc"
     }
   ],

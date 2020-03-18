@@ -59,38 +59,20 @@ body {
 
 
                 <div class="single-sidebar-widget post-category-widget">
-                  <h4 class="single-sidebar-widget__title">Catgory</h4>
+                  <h4 class="single-sidebar-widget__title">Category</h4>
                   <ul class="cat-list mt-20">
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Technology</p>
-                        <p>(03)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Software</p>
-                        <p>(09)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Lifestyle</p>
-                        <p>(12)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Shopping</p>
-                        <p>(02)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Food</p>
-                        <p>(10)</p>
-                      </a>
-                    </li>
+                  @{
+                    var Category = ViewBag.category;
+                    foreach(var i in Category)
+                    {
+                      <li>
+                        <input id="cat" value="@ViewBag.filter" hidden>
+                        <a href="/Moderator/Index?filter=@i" class="d-flex justify-content-between">
+                          <p>@i</p>
+                        </a>
+                      </li>
+                    }
+                  }
                   </ul>
                 </div>
               </div>
@@ -106,7 +88,7 @@ body {
                                 <div class="row">
                                     <div class="col-10">
                                         <small><b>@i.UserName</b> / <small class="text-muted">@i.CreatedAt.ToString("dd-MM-yyyy H:mm")</small></small>
-                                        <h4 onclick="location.href='/Home/Detail?id=@i.Id'">@i.Title</h4>
+                                        <h4 onclick="location.href='/Moderator/Detail?id=@i.Id'">@i.Title</h4>
                                         <small>@i.Category</small>
                                     </div>
                                     <div class="col-2">
@@ -133,8 +115,19 @@ body {
 <script>
     function SearchSortButton(btn)
     {
+      var x=document.getElementById("cat").value;
+      if(x!=null || x!="")
+      {
+        var filter = x;
+        var sort = document.getElementById("select").value;
+        var search = document.getElementById("inlineFormInputGroup").value;
+        location.href='/Moderator/Index?search='+search+'&sort='+sort+'&filter='+filter;
+        
+      }else
+      {
         var sort = document.getElementById("select").value;
         var search = document.getElementById("inlineFormInputGroup").value;
         location.href='/Moderator/Index?search='+search+'&sort='+sort;
+      }
     }
 </script>

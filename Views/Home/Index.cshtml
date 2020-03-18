@@ -56,38 +56,20 @@ body {
 
 
                 <div class="single-sidebar-widget post-category-widget">
-                  <h4 class="single-sidebar-widget__title">Catgory</h4>
+                  <h4 class="single-sidebar-widget__title">Category</h4>
                   <ul class="cat-list mt-20">
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Technology</p>
-                        <p>(03)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Software</p>
-                        <p>(09)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Lifestyle</p>
-                        <p>(12)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Shopping</p>
-                        <p>(02)</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="d-flex justify-content-between">
-                        <p>Food</p>
-                        <p>(10)</p>
-                      </a>
-                    </li>
+                  @{
+                    var Category = ViewBag.category;
+                    foreach(var i in Category)
+                    {
+                      <li>
+                        <input id="cat" value="@ViewBag.filter" hidden>
+                        <a href="/Home/Index?filter=@i" class="d-flex justify-content-between">
+                          <p>@i</p>
+                        </a>
+                      </li>
+                    }
+                  }
                   </ul>
                 </div>
               </div>
@@ -98,15 +80,22 @@ body {
                     var threads = ViewBag.threads;
                     foreach(var i in threads)
                     {
-                        <div class="card" onclick="location.href='/Home/Detail?id=@i.Id'">
+                        <div class="card">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-10">
-                                        <small><b>@i.UserName</b> / <small class="text-muted">@i.CreatedAt.ToString("dd-MM-yyyy H:mm")</small></small>
-                                        <h4>@i.Title</h4>
-                                        @* <div class="text-right"> *@
-                                        <small>@i.Category</small>
-                                        @* </div> *@
+                                        <small><b>@i.UserName</b> / <small class="text-muted">@i.CreatedAt.ToString("dd-MM-yyyy H:mm")</small>
+                                        &nbsp&nbsp&nbsp
+                                        @if(@i.Status=="Lock")
+                                        {
+                                          <img src="https://image.flaticon.com/icons/svg/483/483408.svg" style="width: 10px;height:10px;">
+                                        }else
+                                        {
+                                          <img src="https://image.flaticon.com/icons/svg/597/597356.svg" style="width: 10px;height:10px;">
+                                        }
+                                        </small>
+                                        <h4 onclick="location.href='/Home/Detail?id=@i.Id'">@i.Title</h4>
+                                        <small>@i.Category</small><br>
                                     </div>
                                     <div class="col-2">
                                         <div class="text-right">
@@ -119,17 +108,49 @@ body {
                         <br>
                     }
                 }
-                
             </div>
-
         </div>
     </div>
 </section>
+<div class="bio-info collapse" id="profile" aria-labelledby="headingPage" data-parent="#accordionSidebar">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bio-image">
+							<img style="border-radius:50%;width:250px;height:300px;" alt="image" />
+						</div>			
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="bio-content">
+					<h1>Hi there, I'm </h1>
+					<h6>Email : </h6>
+					<h6>Gender : </h6>
+					<h6>Phone : </h6>
+					<h6>Birth  Date :</h6>
+					<h6>Birth Place :</h6>
+				</div>
+			</div>
+		</div>	
+</div>
 <script>
     function SearchSortButton(btn)
     {
+      var x=document.getElementById("cat").value;
+      if(x!=null || x!="")
+      {
+        var filter = x;
+        var sort = document.getElementById("select").value;
+        var search = document.getElementById("inlineFormInputGroup").value;
+        location.href='/Home/Index?search='+search+'&sort='+sort+'&filter='+filter;
+        
+      }else
+      {
         var sort = document.getElementById("select").value;
         var search = document.getElementById("inlineFormInputGroup").value;
         location.href='/Home/Index?search='+search+'&sort='+sort;
+      }
     }
 </script>

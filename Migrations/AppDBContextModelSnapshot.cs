@@ -29,14 +29,14 @@ namespace Task_Try_Out_Forum.Migrations
                     b.Property<string>("Comments")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ForUserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Thread_Id")
                         .HasColumnType("int");
 
                     b.Property<int>("User_Id")
                         .HasColumnType("int");
+
+                    b.Property<string>("User_Name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -56,9 +56,6 @@ namespace Task_Try_Out_Forum.Migrations
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Comment")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -77,12 +74,45 @@ namespace Task_Try_Out_Forum.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Views")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("threads");
+                });
+
+            modelBuilder.Entity("Task_Try_Out_Forum.Models.ThreadsFull", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Body")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Category")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ThreadId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("threadsfull");
                 });
 
             modelBuilder.Entity("Task_Try_Out_Forum.Models.User", b =>

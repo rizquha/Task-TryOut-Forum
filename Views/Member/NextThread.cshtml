@@ -1,0 +1,20 @@
+@{
+    Layout="_LayoutMember";
+}
+<br><br><br><br><br>
+@{
+    var next=ViewBag.lanjutthread;
+        <form method="POST" id="form1" enctype="multipart/form-data">
+            <label>Category</label>
+            <input class="form-control" value="@next.Category" name="category">
+            <label>Title</label>
+            <input class="form-control" value="@next.Title" name="title">
+            <label>Body</label>
+            <input class="form-control" placeholder="Body" name="body">
+            <label>Image</label>
+            <input class="form-control" type="file" name="image">
+            <br>
+            <button class="btn btn-info" type="submit" asp-action="Add" asp-controller="Member">Send</button>
+            <button class="btn btn-info" type="submit" asp-action="AddThread" asp-controller="Member">Add Tread</button>
+        </form>
+}

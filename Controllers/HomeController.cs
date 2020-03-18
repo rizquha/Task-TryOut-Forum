@@ -25,48 +25,93 @@ namespace Task_Try_Out_Forum.Controllers
             _AppDbContext = appDbContext;
             Configuration = configuration;
         }
-        public IActionResult Index(string search,string sort)
+        public IActionResult Index(string search,string sort,string filter)
         {
-            Console.WriteLine(sort);
-            Console.WriteLine(search);
-            if(!String.IsNullOrEmpty(search) || !String.IsNullOrWhiteSpace(search))
+            var category = (from i in _AppDbContext.threads select i.Category).Distinct();
+            ViewBag.category=category;
+            ViewBag.filter=filter;
+            if(!String.IsNullOrEmpty(filter) || !String.IsNullOrWhiteSpace(filter))
             {
-                Console.WriteLine("oke");
-                if(sort=="By DateTime")
+                if(!String.IsNullOrEmpty(search) || !String.IsNullOrWhiteSpace(search))
                 {
-                    var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.CreatedAt);
-                    ViewBag.threads = threads;
+                    Console.WriteLine("oke");
+                    if(sort=="By DateTime")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) && i.Category==filter select i).OrderBy(x=>x.CreatedAt);
+                        ViewBag.threads = threads;
 
-                }else if(sort=="By Title")
-                {
-                    var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.Title);
-                    ViewBag.threads = threads;
+                    }else if(sort=="By Title")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) && i.Category==filter select i).OrderBy(x=>x.Title);
+                        ViewBag.threads = threads;
 
-                }else if(sort=="Status")
-                {
-                    var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.Status);
-                    ViewBag.threads = threads;
+                    }else if(sort=="Status")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) && i.Category==filter select i).OrderBy(x=>x.Status);
+                        ViewBag.threads = threads;
 
-                }
-            }
-            else
-            {
-                if(sort=="By Title")
-                {
-                    var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Title);
-                    ViewBag.threads = threads1;
-
-                }else if(sort=="Status")
-                {
-                    var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Status);
-                    ViewBag.threads = threads1;
+                    }
                 }
                 else
                 {
-                    var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.CreatedAt);
-                    ViewBag.threads = threads1;
+                    if(sort=="By Title")
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Title);
+                        ViewBag.threads = threads1;
+
+                    }else if(sort=="Status")
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Status);
+                        ViewBag.threads = threads1;
+                    }
+                    else
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).Distinct().OrderBy(x=>x.CreatedAt);
+                        ViewBag.threads = threads1;
+                    }
+                    
                 }
-                
+            }else
+            {
+                if(!String.IsNullOrEmpty(search) || !String.IsNullOrWhiteSpace(search))
+                {
+                    Console.WriteLine("oke");
+                    if(sort=="By DateTime")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.CreatedAt);
+                        ViewBag.threads = threads;
+
+                    }else if(sort=="By Title")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.Title);
+                        ViewBag.threads = threads;
+
+                    }else if(sort=="Status")
+                    {
+                        var threads = (from i in _AppDbContext.threads where (i.Title.Contains(search) || i.Body.Contains(search)) select i).OrderBy(x=>x.Status);
+                        ViewBag.threads = threads;
+
+                    }
+                }
+                else
+                {
+                    if(sort=="By Title")
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Title);
+                        ViewBag.threads = threads1;
+
+                    }else if(sort=="Status")
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).OrderBy(x=>x.Status);
+                        ViewBag.threads = threads1;
+                    }
+                    else
+                    {
+                        var threads1 = (from i in _AppDbContext.threads select i).Distinct().OrderBy(x=>x.CreatedAt);
+                        ViewBag.threads = threads1;
+                    }
+                    
+                }
             }
             return View();
         }
@@ -170,6 +215,11 @@ namespace Task_Try_Out_Forum.Controllers
         {
             var detail = from i in _AppDbContext.threads where i.Id==id select i;
             ViewBag.detail = detail;
+            var full = (from i in _AppDbContext.threadsfull where i.ThreadId==id select i).OrderBy(x=>x.CreatedAt);
+            ViewBag.full =full;
+            var comment = from i in _AppDbContext.comments where i.Thread_Id==id select i;
+            ViewBag.comments=comment;
+            ViewBag.commentcount = comment.Count();
             return View();
         }
         public IActionResult Privacy()

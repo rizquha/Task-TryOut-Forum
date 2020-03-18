@@ -1,0 +1,158 @@
+<style>
+    #customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+@{
+    Layout="_LayoutAdministrator";
+}
+<br><br><br><br>
+<button class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Add User</button>
+<br>
+<table id="customers">
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Change Role</th>
+    <th>Status</th>
+  </tr>
+  @{
+      var counter=0;
+      var member = ViewBag.member;
+      foreach(var i in member)
+      {
+          counter+=1;
+        <tr>
+            <td>@counter</td>
+            <td>@i.Nama</td>
+            <td>@i.Role</td>
+            <td>
+              @if(@i.Role=="Member")
+              {
+              <select id="select-Member" class="form-control">
+                <option value="Moderator">Moderator</option>
+                <option value="Administrator">Administrator</option>
+              </select>
+              <br>
+              <button id="@i.Id-Member" onclick="javascript : ChangeRole(this)" class="btn btn-info text-center">Save</button>
+              }else if(@i.Role=="Moderator")
+              {
+              <select id="select-Moderator" class="form-control">
+                <option value="Member">Member</option>
+                <option value="Administrator">Administrator</option>
+              </select>
+              <br>
+              <button id="@i.Id-Moderator" value="@i.Id" class="btn btn-info text-center" onclick="javascript : ChangeRole(this)">Save</button>
+              }else if(@i.Role=="Administrator")
+              {
+              <select id="select-Administrator" class="form-control">
+                <option value="Member">Member</option>
+                <option value="Moderator">Moderator</option>
+              </select>
+              <br>
+              <button id="@i.Id-Administrator" value="@i.Id" onclick="javascript : ChangeRole(this)" class="btn btn-info text-center">Save</button>
+              }
+            </td>
+            @if(@i.Role=="Member")
+            {
+              @if(@i.Ban==true)
+              {
+                <td class="text-center">Banned
+                  <br>
+                    <button onclick="location.href='/Administrator/UnbanMember?id=@i.Id'" class="btn btn-info">Unban This Member</button>
+                </td>
+              }else
+              {
+                <td class="text-center">No Banned
+                  <br>
+                    <button onclick="location.href='/Administrator/BanMember?id=@i.Id'" class="btn btn-info">Ban This Member</button>
+                </td>
+              }
+            }
+            else
+            {
+              <td class="text-center">Always Active</td>
+            }
+        </tr>
+      }
+  }
+  
+</table>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Name</label>
+        <input class="form-control" type="text" id="name">
+        <br>
+        <label>Email</label>
+        <input class="form-control" type="text" id="email">
+        <br>
+        <label>Password</label>
+        <input class="form-control" type="text" id="pass">
+        <br>
+        <label>Email</label>
+        <select class="form-control" id="selectadd">
+          <option value="Member">Member</option>
+          <option value="Moderator">Moderator</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+        <br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"onclick="javascript : SaveAdd(this)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function ChangeRole(btn)
+  {
+    var id = btn.id;
+    var split = id.split("-");
+    var val = split[1];
+    var idselect = "select-"+val;
+    var select = document.getElementById(idselect).value;
+    var iduser = split[0];
+    console.log(split);
+    console.log(iduser);
+    console.log(split[0]);
+    location.href='/Administrator/ChangeRole?id='+iduser+'&role='+select;
+  }
+  function SaveAdd(btn)
+  {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var pass = document.getElementById("pass").value;
+    var selectadd = document.getElementById("selectadd").value;
+    location.href='/Administrator/AddUser?name='+name+'&email='+email+'&pass='+pass+'&selectadd='+selectadd;
+
+  }
+</script>
